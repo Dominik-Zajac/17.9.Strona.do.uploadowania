@@ -1,0 +1,85 @@
+body {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+
+	background-color: #fbfbfb;
+	margin-top: 25vh;
+}
+
+/* ---------- Extend rule ---------- */
+.input {
+	background-color: #FFF;
+	border: 2px solid #dedede;
+	border-radius: 3px;
+}
+
+/* ---------- Heading ---------- */
+h1 {
+	font-size: 45px;
+	color: #7d0057;
+}
+
+/* ---------- Form ---------- */
+form {
+	text-align: left;
+	label {
+		font-size: 25px;
+		margin: 10px;
+		color: #4c4c4c;
+	}
+	input[type=text] {
+		@extend .input;
+		width: 180px;
+		height: 25px;
+		padding: 15px;
+		
+		font-size: 15px;
+		&:focus {
+			color: #7d0057;
+			border-color: #7d0057;
+		}
+	}
+
+	input[type=file] {
+		display: none;
+	}
+	#input-file {
+		@extend .input;
+		display: inline-block;
+		
+		width: 180px;
+		height: 15px;
+		padding: 10px;
+
+		font-size: 15px;
+		cursor: pointer;	
+		color: #b2bec3;
+		&:hover {
+			color: #7d0057;
+			border-color: #7d0057;
+		}
+	}
+
+	#submit-button {
+		text-align: center;
+	}
+	input[type=submit] {
+		@extend .input;
+		width: 110px;
+		height: 50px;
+		margin-top: 25px;
+
+		color: #b2bec3;
+		font-size: 20px;
+		cursor: pointer;
+
+		box-shadow: 1px 1px 0 #dbdbdb;
+		&:hover {
+			color: #7d0057;
+			border-color: #7d0057;
+			box-shadow: 1px 1px 0 #7d0057;
+		}
+	}
+
+}
